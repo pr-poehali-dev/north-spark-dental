@@ -104,7 +104,7 @@ const Index = () => {
             <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center">
               <Icon name="Sparkles" size={24} className="text-white" />
             </div>
-            <span className="text-2xl font-bold text-foreground">Сияние Севера</span>
+            <span className="text-2xl font-bold text-foreground">Сияние</span>
           </div>
           <Button size="lg" className="hidden md:flex">
             Записаться на консультацию
