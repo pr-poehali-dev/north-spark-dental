@@ -337,6 +337,57 @@ const Index = () => {
         </div>
       </section>
 
+      <section className="py-20 px-4 bg-white">
+        <div className="container mx-auto max-w-7xl">
+          <h2 className="text-4xl font-bold text-center mb-4 text-foreground">Результаты наших работ</h2>
+          <p className="text-center text-muted-foreground mb-12 text-lg">Реальные примеры успешной имплантации</p>
+          
+          <div className="grid md:grid-cols-3 gap-6 mb-8">
+            <div className="relative group overflow-hidden rounded-2xl shadow-lg">
+              <img 
+                src="https://cdn.poehali.dev/projects/f834bb08-65e9-42f1-b89a-c2d66c739710/files/5311ea37-052e-41c4-a69b-ffab89297a9e.jpg" 
+                alt="Результат имплантации - до и после"
+                className="w-full h-80 object-cover transform group-hover:scale-110 transition-transform duration-500"
+              />
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
+                <p className="text-white font-semibold">Полная реставрация улыбки</p>
+                <p className="text-white/80 text-sm">6 имплантов Nobel Biocare</p>
+              </div>
+            </div>
+            
+            <div className="relative group overflow-hidden rounded-2xl shadow-lg">
+              <img 
+                src="https://cdn.poehali.dev/projects/f834bb08-65e9-42f1-b89a-c2d66c739710/files/d8f50520-0d73-4c7e-ab95-168faeb6a52c.jpg" 
+                alt="Идеальная улыбка после имплантации"
+                className="w-full h-80 object-cover transform group-hover:scale-110 transition-transform duration-500"
+              />
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
+                <p className="text-white font-semibold">Естественный результат</p>
+                <p className="text-white/80 text-sm">Имплант + циркониевая коронка</p>
+              </div>
+            </div>
+            
+            <div className="relative group overflow-hidden rounded-2xl shadow-lg">
+              <img 
+                src="https://cdn.poehali.dev/projects/f834bb08-65e9-42f1-b89a-c2d66c739710/files/2b827fd7-b2be-4be4-b0ed-4c83c5514fff.jpg" 
+                alt="Трансформация улыбки"
+                className="w-full h-80 object-cover transform group-hover:scale-110 transition-transform duration-500"
+              />
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
+                <p className="text-white font-semibold">Экспресс-имплантация</p>
+                <p className="text-white/80 text-sm">Установка за 1 день</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="text-center">
+            <Button size="lg" variant="outline" className="text-lg px-8 py-6">
+              Посмотреть все работы
+            </Button>
+          </div>
+        </div>
+      </section>
+
       <section className="py-20 px-4 bg-gradient-to-b from-blue-50 to-white">
         <div className="container mx-auto max-w-6xl">
           <h2 className="text-4xl font-bold text-center mb-4 text-foreground">Отзывы наших пациентов</h2>
