@@ -430,14 +430,6 @@ const Index = () => {
               </Card>
             ))}
           </div>
-
-          <div className="mt-12 text-center">
-            <img 
-              src="https://cdn.poehali.dev/projects/f834bb08-65e9-42f1-b89a-c2d66c739710/files/5f4a8ffe-6f44-4dff-87b3-196ca9aa2761.jpg" 
-              alt="Зона ожидания в клинике Сияние Севера"
-              className="mx-auto rounded-2xl shadow-xl max-w-md w-full object-cover"
-            />
-          </div>
         </div>
       </section>
 
