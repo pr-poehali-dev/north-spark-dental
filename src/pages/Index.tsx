@@ -281,6 +281,19 @@ const Index = () => {
       </section>
 
       <section className="py-20 px-4 bg-gradient-to-b from-blue-50 to-white">
+        <div className="container mx-auto max-w-7xl">
+          <h2 className="text-4xl font-bold text-center mb-4 text-foreground">Врачи клиники</h2>
+          <p className="text-center text-muted-foreground mb-12 text-lg">Команда профессионалов с многолетним опытом</p>
+          
+          <img 
+            src="https://cdn.poehali.dev/files/ad0daa14-098c-4413-af7b-eb9729e597b9.png" 
+            alt="Врачи клиники Сияние Севера"
+            className="w-full rounded-2xl shadow-xl"
+          />
+        </div>
+      </section>
+
+      <section className="py-20 px-4 bg-white">
         <div className="container mx-auto max-w-5xl">
           <h2 className="text-4xl font-bold text-center mb-4 text-foreground">Как проходит имплантация</h2>
           <p className="text-center text-muted-foreground mb-16 text-lg">Прозрачный процесс от консультации до результата</p>
