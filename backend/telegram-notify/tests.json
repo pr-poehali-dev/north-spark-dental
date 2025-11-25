@@ -1,0 +1,19 @@
+{
+  "tests": [
+    {
+      "name": "Test telegram notification",
+      "method": "POST",
+      "path": "/",
+      "body": {
+        "name": "Тестовый пользователь",
+        "phone": "+7 999 123-45-67",
+        "message": "Хочу записаться на консультацию"
+      },
+      "expectedStatus": 200,
+      "expectedBody": {
+        "success": true
+      },
+      "bodyMatcher": "partial"
+    }
+  ]
+}
