@@ -12,6 +12,12 @@ const Index = () => {
     message: ''
   });
   const [showPopup, setShowPopup] = useState(false);
+  const [timeLeft, setTimeLeft] = useState({
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0
+  });
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -19,6 +25,30 @@ const Index = () => {
     }, 30000);
 
     return () => clearTimeout(timer);
+  }, []);
+
+  useEffect(() => {
+    const targetDate = new Date();
+    targetDate.setDate(targetDate.getDate() + 7);
+    
+    const updateCountdown = () => {
+      const now = new Date().getTime();
+      const distance = targetDate.getTime() - now;
+      
+      if (distance > 0) {
+        setTimeLeft({
+          days: Math.floor(distance / (1000 * 60 * 60 * 24)),
+          hours: Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+          minutes: Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
+          seconds: Math.floor((distance % (1000 * 60)) / 1000)
+        });
+      }
+    };
+    
+    updateCountdown();
+    const interval = setInterval(updateCountdown, 1000);
+    
+    return () => clearInterval(interval);
   }, []);
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -151,6 +181,58 @@ const Index = () => {
                 alt="Интерьер клиники Сияние Севера"
                 className="shadow-xl w-full py-1.5 px-0 mx-0.5 my-[101px] rounded-lg object-contain"
               />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-12 px-4 bg-gradient-to-r from-primary via-gray-800 to-primary">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center space-y-6">
+            <div className="inline-block bg-white text-primary px-6 py-2 rounded-full font-bold text-sm">
+              ⚡ ОГРАНИЧЕННОЕ ПРЕДЛОЖЕНИЕ
+            </div>
+            <h2 className="text-4xl lg:text-5xl font-bold text-white">
+              Акция на имплантацию заканчивается через:
+            </h2>
+            
+            <div className="grid grid-cols-4 gap-4 max-w-3xl mx-auto pt-6">
+              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border-2 border-white/20">
+                <div className="text-5xl lg:text-6xl font-bold text-white mb-2">
+                  {String(timeLeft.days).padStart(2, '0')}
+                </div>
+                <div className="text-white/80 text-sm lg:text-base font-semibold uppercase">Дней</div>
+              </div>
+              
+              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border-2 border-white/20">
+                <div className="text-5xl lg:text-6xl font-bold text-white mb-2">
+                  {String(timeLeft.hours).padStart(2, '0')}
+                </div>
+                <div className="text-white/80 text-sm lg:text-base font-semibold uppercase">Часов</div>
+              </div>
+              
+              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border-2 border-white/20">
+                <div className="text-5xl lg:text-6xl font-bold text-white mb-2">
+                  {String(timeLeft.minutes).padStart(2, '0')}
+                </div>
+                <div className="text-white/80 text-sm lg:text-base font-semibold uppercase">Минут</div>
+              </div>
+              
+              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border-2 border-white/20">
+                <div className="text-5xl lg:text-6xl font-bold text-white mb-2 animate-pulse">
+                  {String(timeLeft.seconds).padStart(2, '0')}
+                </div>
+                <div className="text-white/80 text-sm lg:text-base font-semibold uppercase">Секунд</div>
+              </div>
+            </div>
+
+            <div className="pt-6">
+              <p className="text-xl text-white/90 mb-4">
+                Скидка 15% на установку имплантов Nobel Biocare
+              </p>
+              <Button size="lg" className="bg-white text-primary hover:bg-white/90 text-lg px-12 py-6 font-bold">
+                Успеть записаться
+              </Button>
             </div>
           </div>
         </div>
