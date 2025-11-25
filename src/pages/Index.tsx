@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -6,6 +6,8 @@ import { Textarea } from '@/components/ui/textarea';
 import Icon from '@/components/ui/icon';
 
 const Index = () => {
+  const [visibleSections, setVisibleSections] = useState<Set<string>>(new Set());
+  const observerRef = useRef<IntersectionObserver | null>(null);
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
@@ -49,6 +51,32 @@ const Index = () => {
     const interval = setInterval(updateCountdown, 1000);
     
     return () => clearInterval(interval);
+  }, []);
+
+  useEffect(() => {
+    observerRef.current = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setVisibleSections((prev) => new Set(prev).add(entry.target.id));
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    const sections = document.querySelectorAll('[data-animate]');
+    sections.forEach((section) => {
+      if (observerRef.current) {
+        observerRef.current.observe(section);
+      }
+    });
+
+    return () => {
+      if (observerRef.current) {
+        observerRef.current.disconnect();
+      }
+    };
   }, []);
 
   const scrollToForm = () => {
@@ -255,7 +283,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-20 px-4 bg-white">
+      <section id="why-us" data-animate className={`py-20 px-4 bg-white transition-all duration-1000 ${visibleSections.has('why-us') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
         <div className="container mx-auto max-w-7xl">
           <h2 className="text-4xl font-bold text-center mb-4 text-foreground">Почему выбирают нас</h2>
           <p className="text-center text-muted-foreground mb-12 text-lg">Современные технологии и опытные специалисты</p>
@@ -297,7 +325,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-20 px-4 bg-gradient-to-b from-blue-50 to-white">
+      <section id="doctors" data-animate className={`py-20 px-4 bg-gradient-to-b from-blue-50 to-white transition-all duration-1000 ${visibleSections.has('doctors') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
         <div className="container mx-auto max-w-7xl">
           <h2 className="text-4xl font-bold text-center mb-4 text-foreground">Врачи клиники</h2>
           <p className="text-center text-muted-foreground mb-12 text-lg">Команда профессионалов с многолетним опытом</p>
@@ -362,7 +390,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-20 px-4 bg-white">
+      <section id="process" data-animate className={`py-20 px-4 bg-white transition-all duration-1000 ${visibleSections.has('process') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
         <div className="container mx-auto max-w-5xl">
           <h2 className="text-4xl font-bold text-center mb-4 text-foreground">Как проходит имплантация</h2>
           <p className="text-center text-muted-foreground mb-16 text-lg">Прозрачный процесс от консультации до результата</p>
@@ -415,7 +443,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-20 px-4 bg-white">
+      <section id="pricing" data-animate className={`py-20 px-4 bg-white transition-all duration-1000 ${visibleSections.has('pricing') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
         <div className="container mx-auto max-w-7xl">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -501,7 +529,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-20 px-4 bg-white">
+      <section id="results" data-animate className={`py-20 px-4 bg-white transition-all duration-1000 ${visibleSections.has('results') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
         <div className="container mx-auto max-w-7xl">
           <h2 className="text-4xl font-bold text-center mb-4 text-foreground">Результаты наших работ</h2>
           <p className="text-center text-muted-foreground mb-12 text-lg">Реальные примеры успешной имплантации</p>
@@ -552,7 +580,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-20 px-4 bg-gradient-to-b from-blue-50 to-white">
+      <section id="reviews" data-animate className={`py-20 px-4 bg-gradient-to-b from-blue-50 to-white transition-all duration-1000 ${visibleSections.has('reviews') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
         <div className="container mx-auto max-w-6xl">
           <h2 className="text-4xl font-bold text-center mb-4 text-foreground">Отзывы наших пациентов</h2>
           <p className="text-center text-muted-foreground mb-12 text-lg">Реальные истории изменений</p>
