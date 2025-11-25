@@ -182,13 +182,13 @@ const Index = () => {
 
       <header className="fixed top-0 left-0 right-0 bg-white shadow-sm z-50">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2">
             <img 
               src="https://cdn.poehali.dev/projects/f834bb08-65e9-42f1-b89a-c2d66c739710/files/1584c69d-d85d-429c-aeee-edc2bf5e350a.jpg" 
               alt="Сияние Севера"
-              className="w-12 h-12 object-contain"
+              className="w-10 h-10 object-contain"
             />
-            <span className="text-2xl font-bold text-foreground">Сияние</span>
+            <span className="text-xl md:text-2xl font-bold text-foreground">Сияние</span>
           </div>
           <Button size="lg" className="hidden md:flex" onClick={scrollToForm}>
             Записаться на консультацию
@@ -200,8 +200,8 @@ const Index = () => {
         <div className="container mx-auto max-w-7xl">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
-              <h1 className="text-5xl lg:text-6xl font-bold leading-tight text-foreground">Инновационный подход к лечению зубов теперь в Томске !</h1>
-              <p className="text-xl text-muted-foreground">Современная имплантация зубов в Томске. Мы привезли к вам лучших специалистов и самые современные протоколы лечения из МОСКВЫ ! Пожизненная гарантия на импланты премиум-класса.</p>
+              <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold leading-tight text-foreground">Инновационный подход к лечению зубов теперь в Томске !</h1>
+              <p className="text-base md:text-lg lg:text-xl text-muted-foreground">Современная имплантация зубов в Томске. Мы привезли к вам лучших специалистов и самые современные протоколы лечения из МОСКВЫ ! Пожизненная гарантия на импланты премиум-класса.</p>
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
                 <Button size="lg" className="text-lg px-8 py-6" onClick={scrollToForm}>
                   Бесплатная консультация
@@ -210,26 +210,26 @@ const Index = () => {
                   <a href="tel:+73822270777">+7 (3822) 270-777</a>
                 </Button>
               </div>
-              <div className="grid grid-cols-3 gap-6 pt-6">
+              <div className="grid grid-cols-3 gap-3 md:gap-6 pt-6">
                 <div className="text-center">
-                  <div className="text-4xl font-bold text-primary">15+</div>
-                  <div className="text-sm text-muted-foreground mt-1">лет опыта</div>
+                  <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary">15+</div>
+                  <div className="text-xs md:text-sm text-muted-foreground mt-1">лет опыта</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-4xl font-bold text-primary">3500+</div>
-                  <div className="text-sm text-muted-foreground mt-1">имплантов</div>
+                  <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary">3500+</div>
+                  <div className="text-xs md:text-sm text-muted-foreground mt-1">имплантов</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-4xl font-bold text-primary">98%</div>
-                  <div className="text-sm text-muted-foreground mt-1">приживаемость</div>
+                  <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary">98%</div>
+                  <div className="text-xs md:text-sm text-muted-foreground mt-1">приживаемость</div>
                 </div>
               </div>
             </div>
-            <div className="relative">
+            <div className="relative hidden lg:block">
               <img 
                 src="https://cdn.poehali.dev/files/a66c0a90-09bd-422a-9194-963a39ec7fb9.png" 
                 alt="Интерьер клиники Сияние Севера"
-                className="shadow-xl w-full py-1.5 px-0 mx-0.5 my-[101px] rounded-lg object-contain"
+                className="shadow-xl w-full rounded-lg object-contain"
               />
             </div>
           </div>
@@ -240,42 +240,42 @@ const Index = () => {
         <div className="container mx-auto max-w-6xl">
           <div className="text-center space-y-6">
             <div className="inline-block bg-white text-primary px-6 py-2 rounded-full font-bold text-sm"> ОГРАНИЧЕННОЕ ПРЕДЛОЖЕНИЕ</div>
-            <h2 className="text-4xl lg:text-5xl font-bold text-white">
+            <h2 className="text-2xl md:text-3xl lg:text-5xl font-bold text-white">
               Акция на имплантацию заканчивается через:
             </h2>
             
-            <div className="grid grid-cols-4 gap-4 max-w-3xl mx-auto pt-6">
-              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border-2 border-white/20">
-                <div className="text-5xl lg:text-6xl font-bold text-white mb-2">
+            <div className="grid grid-cols-4 gap-2 md:gap-4 max-w-3xl mx-auto pt-6">
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl md:rounded-2xl p-3 md:p-6 border-2 border-white/20">
+                <div className="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-1 md:mb-2">
                   {String(timeLeft.days).padStart(2, '0')}
                 </div>
-                <div className="text-white/80 text-sm lg:text-base font-semibold uppercase">Дней</div>
+                <div className="text-white/80 text-xs md:text-sm lg:text-base font-semibold uppercase">Дней</div>
               </div>
               
-              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border-2 border-white/20">
-                <div className="text-5xl lg:text-6xl font-bold text-white mb-2">
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl md:rounded-2xl p-3 md:p-6 border-2 border-white/20">
+                <div className="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-1 md:mb-2">
                   {String(timeLeft.hours).padStart(2, '0')}
                 </div>
-                <div className="text-white/80 text-sm lg:text-base font-semibold uppercase">Часов</div>
+                <div className="text-white/80 text-xs md:text-sm lg:text-base font-semibold uppercase">Часов</div>
               </div>
               
-              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border-2 border-white/20">
-                <div className="text-5xl lg:text-6xl font-bold text-white mb-2">
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl md:rounded-2xl p-3 md:p-6 border-2 border-white/20">
+                <div className="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-1 md:mb-2">
                   {String(timeLeft.minutes).padStart(2, '0')}
                 </div>
-                <div className="text-white/80 text-sm lg:text-base font-semibold uppercase">Минут</div>
+                <div className="text-white/80 text-xs md:text-sm lg:text-base font-semibold uppercase">Минут</div>
               </div>
               
-              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border-2 border-white/20">
-                <div className="text-5xl lg:text-6xl font-bold text-white mb-2 animate-pulse">
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl md:rounded-2xl p-3 md:p-6 border-2 border-white/20">
+                <div className="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-1 md:mb-2 animate-pulse">
                   {String(timeLeft.seconds).padStart(2, '0')}
                 </div>
-                <div className="text-white/80 text-sm lg:text-base font-semibold uppercase">Секунд</div>
+                <div className="text-white/80 text-xs md:text-sm lg:text-base font-semibold uppercase">Секунд</div>
               </div>
             </div>
 
             <div className="pt-6">
-              <p className="text-xl text-white/90 mb-4">
+              <p className="text-base md:text-lg lg:text-xl text-white/90 mb-4">
                 Скидка 15% на установку имплантов Nobel Biocare
               </p>
               <Button size="lg" className="bg-white text-primary hover:bg-white/90 text-lg px-12 py-6 font-bold" onClick={scrollToForm}>
@@ -288,8 +288,8 @@ const Index = () => {
 
       <section id="why-us" data-animate className={`py-20 px-4 bg-white transition-all duration-1000 ${visibleSections.has('why-us') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
         <div className="container mx-auto max-w-7xl">
-          <h2 className="text-4xl font-bold text-center mb-4 text-foreground">Почему выбирают нас</h2>
-          <p className="text-center text-muted-foreground mb-12 text-lg">Современные технологии и опытные специалисты</p>
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-foreground">Почему выбирают нас</h2>
+          <p className="text-center text-muted-foreground mb-12 text-base md:text-lg">Современные технологии и опытные специалисты</p>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
@@ -330,8 +330,8 @@ const Index = () => {
 
       <section id="doctors" data-animate className={`py-20 px-4 bg-gradient-to-b from-blue-50 to-white transition-all duration-1000 ${visibleSections.has('doctors') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
         <div className="container mx-auto max-w-7xl">
-          <h2 className="text-4xl font-bold text-center mb-4 text-foreground">Врачи клиники</h2>
-          <p className="text-center text-muted-foreground mb-12 text-lg">Команда профессионалов с многолетним опытом</p>
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-foreground">Врачи клиники</h2>
+          <p className="text-center text-muted-foreground mb-12 text-base md:text-lg">Команда профессионалов с многолетним опытом</p>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
@@ -395,8 +395,8 @@ const Index = () => {
 
       <section id="process" data-animate className={`py-20 px-4 bg-white transition-all duration-1000 ${visibleSections.has('process') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
         <div className="container mx-auto max-w-5xl">
-          <h2 className="text-4xl font-bold text-center mb-4 text-foreground">Как проходит имплантация</h2>
-          <p className="text-center text-muted-foreground mb-16 text-lg">Прозрачный процесс от консультации до результата</p>
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-foreground">Как проходит имплантация</h2>
+          <p className="text-center text-muted-foreground mb-12 md:mb-16 text-base md:text-lg">Прозрачный процесс от консультации до результата</p>
           
           <div className="space-y-8">
             {[
@@ -457,8 +457,8 @@ const Index = () => {
               />
             </div>
             <div className="space-y-6">
-              <h2 className="text-4xl font-bold text-foreground">Цены на имплантацию</h2>
-              <p className="text-lg text-muted-foreground">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground">Цены на имплантацию</h2>
+              <p className="text-base md:text-lg text-muted-foreground">
                 Прозрачное ценообразование без скрытых платежей. Оплата в рассрочку до 12 месяцев.
               </p>
               
@@ -534,8 +534,8 @@ const Index = () => {
 
       <section id="results" data-animate className={`py-20 px-4 bg-white transition-all duration-1000 ${visibleSections.has('results') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
         <div className="container mx-auto max-w-7xl">
-          <h2 className="text-4xl font-bold text-center mb-4 text-foreground">Результаты наших работ</h2>
-          <p className="text-center text-muted-foreground mb-12 text-lg">Реальные примеры успешной имплантации</p>
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-foreground">Результаты наших работ</h2>
+          <p className="text-center text-muted-foreground mb-12 text-base md:text-lg">Реальные примеры успешной имплантации</p>
           
           <div className="grid md:grid-cols-3 gap-6 mb-8">
             <div className="relative group overflow-hidden rounded-2xl shadow-lg">
@@ -585,8 +585,8 @@ const Index = () => {
 
       <section id="reviews" data-animate className={`py-20 px-4 bg-gradient-to-b from-blue-50 to-white transition-all duration-1000 ${visibleSections.has('reviews') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
         <div className="container mx-auto max-w-6xl">
-          <h2 className="text-4xl font-bold text-center mb-4 text-foreground">Отзывы наших пациентов</h2>
-          <p className="text-center text-muted-foreground mb-12 text-lg">Реальные истории изменений</p>
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-foreground">Отзывы наших пациентов</h2>
+          <p className="text-center text-muted-foreground mb-12 text-base md:text-lg">Реальные истории изменений</p>
           
           <div className="grid md:grid-cols-3 gap-6">
             {[
@@ -631,8 +631,8 @@ const Index = () => {
       <section id="consultation-form" className="py-20 px-4 bg-primary">
         <div className="container mx-auto max-w-4xl">
           <div className="max-w-2xl mx-auto text-center space-y-6">
-            <h2 className="text-4xl font-bold text-white">Запишитесь на бесплатную консультацию</h2>
-            <p className="text-xl text-white/90">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white">Запишитесь на бесплатную консультацию</h2>
+            <p className="text-base md:text-lg lg:text-xl text-white/90">
               Получите персональный план лечения и узнайте точную стоимость
             </p>
             
