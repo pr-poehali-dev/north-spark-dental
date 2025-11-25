@@ -146,9 +146,7 @@ const Index = () => {
         <div className="container mx-auto max-w-7xl">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
-              <h1 className="text-5xl lg:text-6xl font-bold leading-tight text-foreground">
-                Верните уверенность в своей улыбке
-              </h1>
+              <h1 className="text-5xl lg:text-6xl font-bold leading-tight text-foreground">Инновационный подход к лечению зубов теперь в Томске !</h1>
               <p className="text-xl text-muted-foreground">
                 Современная имплантация зубов в Томске. Пожизненная гарантия на импланты премиум-класса.
               </p>
