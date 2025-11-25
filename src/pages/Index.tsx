@@ -314,7 +314,7 @@ const Index = () => {
                           АКЦИЯ
                         </div>
                         <h3 className="text-xl font-bold">Экспресс-имплантация</h3>
-                        <p className="text-muted-foreground">Nobel Biocare (США)</p>
+                        <p className="text-muted-foreground">Straumann (Швейцария)</p>
                       </div>
                       <div className="text-right">
                         <div className="text-sm text-muted-foreground line-through">90 000 ₽</div>
