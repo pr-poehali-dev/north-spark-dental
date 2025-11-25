@@ -486,7 +486,7 @@ const Index = () => {
           <div className="grid md:grid-cols-3 gap-6 mb-8">
             <div className="relative group overflow-hidden rounded-2xl shadow-lg">
               <img 
-                src="https://cdn.poehali.dev/projects/f834bb08-65e9-42f1-b89a-c2d66c739710/files/5311ea37-052e-41c4-a69b-ffab89297a9e.jpg" 
+                src="https://cdn.poehali.dev/projects/f834bb08-65e9-42f1-b89a-c2d66c739710/files/1f920764-5f60-42d9-afac-a58e5ff31cc8.jpg" 
                 alt="Результат имплантации - до и после"
                 className="w-full h-80 object-cover transform group-hover:scale-110 transition-transform duration-500"
               />
@@ -498,7 +498,7 @@ const Index = () => {
             
             <div className="relative group overflow-hidden rounded-2xl shadow-lg">
               <img 
-                src="https://cdn.poehali.dev/projects/f834bb08-65e9-42f1-b89a-c2d66c739710/files/d8f50520-0d73-4c7e-ab95-168faeb6a52c.jpg" 
+                src="https://cdn.poehali.dev/projects/f834bb08-65e9-42f1-b89a-c2d66c739710/files/237350a0-d01c-4694-8bda-4bbf168f2c53.jpg" 
                 alt="Идеальная улыбка после имплантации"
                 className="w-full h-80 object-cover transform group-hover:scale-110 transition-transform duration-500"
               />
@@ -510,7 +510,7 @@ const Index = () => {
             
             <div className="relative group overflow-hidden rounded-2xl shadow-lg">
               <img 
-                src="https://cdn.poehali.dev/projects/f834bb08-65e9-42f1-b89a-c2d66c739710/files/2b827fd7-b2be-4be4-b0ed-4c83c5514fff.jpg" 
+                src="https://cdn.poehali.dev/projects/f834bb08-65e9-42f1-b89a-c2d66c739710/files/e0b7d3ff-c739-4b8c-b979-b3f4863ec025.jpg" 
                 alt="Трансформация улыбки"
                 className="w-full h-80 object-cover transform group-hover:scale-110 transition-transform duration-500"
               />
