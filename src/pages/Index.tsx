@@ -50,7 +50,7 @@ const Index = () => {
                 <Button size="lg" className="text-lg px-8 py-6 bg-gradient-to-r from-primary via-yellow-500 to-amber-600 hover:shadow-[0_0_40px_rgba(234,179,8,0.5)] hover:scale-105 transition-all duration-300 font-bold">
                   Бесплатная консультация
                 </Button>
-                <Button size="lg" variant="outline" className="text-lg px-8 py-6 border-2 border-primary text-primary hover:bg-primary/10 transition-all duration-300">+7 (3822) 270777</Button>
+                <Button size="lg" variant="outline" className="text-lg px-8 py-6 border-2 border-primary text-primary hover:bg-primary/10 transition-all duration-300">+7 (3822) 270-777</Button>
               </div>
               <div className="flex gap-8 pt-6">
                 <div className="animate-fade-in" style={{animationDelay: '0.2s'}}>
