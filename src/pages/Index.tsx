@@ -291,33 +291,39 @@ const Index = () => {
                 name: 'Саламов Абубакар Якубович',
                 role: 'ГЛАВНЫЙ ВРАЧ',
                 experience: '15+ лет опыта',
-                specialization: 'Имплантология, хирургия'
+                specialization: 'Имплантология, хирургия',
+                photo: 'https://cdn.poehali.dev/projects/f834bb08-65e9-42f1-b89a-c2d66c739710/files/193beaf5-cab8-4add-b7b1-19abe305f316.jpg'
               },
               {
                 name: 'Реутов Евгений Александрович',
                 role: 'ВРАЧ СТОМАТОЛОГ-ОРТОПЕД',
                 experience: '12+ лет опыта',
-                specialization: 'Протезирование, виниры'
+                specialization: 'Протезирование, виниры',
+                photo: 'https://cdn.poehali.dev/projects/f834bb08-65e9-42f1-b89a-c2d66c739710/files/3ad32231-1878-4f84-823a-d9d62a2ce4c7.jpg'
               },
               {
                 name: 'Магомедов Зураб Залимханович',
                 role: 'ВРАЧ СТОМАТОЛОГ-ОРТОПЕД',
                 experience: '10+ лет опыта',
-                specialization: 'Коронки, мосты'
+                specialization: 'Коронки, мосты',
+                photo: 'https://cdn.poehali.dev/projects/f834bb08-65e9-42f1-b89a-c2d66c739710/files/0ad97e9a-fd18-4ffe-a5bb-85c7ccb07f03.jpg'
               },
               {
                 name: 'Магомедалиев Гасан Алипович',
                 role: 'ВРАЧ СТОМАТОЛОГ-ХИРУРГ',
                 experience: '8+ лет опыта',
-                specialization: 'Имплантация, удаление'
+                specialization: 'Имплантация, удаление',
+                photo: 'https://cdn.poehali.dev/projects/f834bb08-65e9-42f1-b89a-c2d66c739710/files/4a968837-ed93-46f5-9e2e-282e99595068.jpg'
               }
             ].map((doctor, index) => (
               <Card key={index} className="border hover:shadow-xl transition-all duration-300">
                 <CardContent className="p-6 space-y-4">
-                  <div className="aspect-square bg-gradient-to-br from-gray-100 to-gray-200 rounded-xl overflow-hidden">
-                    <div className="w-full h-full flex items-center justify-center">
-                      <Icon name="User" size={80} className="text-gray-400" />
-                    </div>
+                  <div className="aspect-square rounded-xl overflow-hidden">
+                    <img 
+                      src={doctor.photo} 
+                      alt={doctor.name}
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                   <div className="space-y-2">
                     <div className="text-xs font-bold text-primary uppercase tracking-wide">
