@@ -33,45 +33,47 @@ const Index = () => {
         </div>
       </header>
 
-      <section className="pt-32 pb-20 px-4 bg-gradient-to-b from-blue-50/50 to-white">
-        <div className="container mx-auto max-w-7xl">
+      <section className="pt-32 pb-20 px-4 bg-gradient-to-br from-purple-50 via-blue-50 to-pink-50 relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,rgba(168,85,247,0.1),rgba(14,165,233,0.1))] animate-gradient-shift bg-[length:200%_200%]"></div>
+        <div className="container mx-auto max-w-7xl relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6">
-              <h1 className="text-5xl lg:text-6xl font-bold text-foreground leading-tight">
+            <div className="space-y-6 animate-slide-up">
+              <h1 className="text-5xl lg:text-6xl font-bold text-foreground leading-tight bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
                 Верните уверенность в своей улыбке
               </h1>
               <p className="text-xl text-muted-foreground">
                 Современная имплантация зубов в Томске. Пожизненная гарантия на импланты премиум-класса.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                <Button size="lg" className="text-lg px-8 py-6">
+                <Button size="lg" className="text-lg px-8 py-6 bg-gradient-to-r from-primary to-secondary hover:shadow-2xl hover:scale-105 transition-all duration-300 animate-pulse-glow">
                   Бесплатная консультация
                 </Button>
-                <Button size="lg" variant="outline" className="text-lg px-8 py-6">
+                <Button size="lg" variant="outline" className="text-lg px-8 py-6 border-2 hover:bg-gradient-to-r hover:from-primary/10 hover:to-secondary/10 transition-all duration-300">
                   <Icon name="Phone" size={20} className="mr-2" />
                   +7 (3822) 000-000
                 </Button>
               </div>
               <div className="flex gap-8 pt-6">
-                <div>
-                  <div className="text-4xl font-bold text-primary">15+</div>
+                <div className="animate-fade-in" style={{animationDelay: '0.2s'}}>
+                  <div className="text-4xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">15+</div>
                   <div className="text-sm text-muted-foreground">лет опыта</div>
                 </div>
-                <div>
-                  <div className="text-4xl font-bold text-primary">3500+</div>
+                <div className="animate-fade-in" style={{animationDelay: '0.4s'}}>
+                  <div className="text-4xl font-bold bg-gradient-to-r from-secondary to-accent bg-clip-text text-transparent">3500+</div>
                   <div className="text-sm text-muted-foreground">установленных имплантов</div>
                 </div>
-                <div>
-                  <div className="text-4xl font-bold text-primary">98%</div>
+                <div className="animate-fade-in" style={{animationDelay: '0.6s'}}>
+                  <div className="text-4xl font-bold bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">98%</div>
                   <div className="text-sm text-muted-foreground">успешной приживаемости</div>
                 </div>
               </div>
             </div>
-            <div className="relative">
+            <div className="relative animate-scale-in">
+              <div className="absolute -inset-4 bg-gradient-to-r from-primary via-secondary to-accent rounded-3xl blur-2xl opacity-30 animate-pulse"></div>
               <img 
                 src="https://cdn.poehali.dev/projects/f834bb08-65e9-42f1-b89a-c2d66c739710/files/f66a2323-90b5-45e4-ac04-fd3c8fcfd7cf.jpg" 
                 alt="Стоматологическая клиника"
-                className="rounded-2xl shadow-2xl w-full"
+                className="rounded-2xl shadow-2xl w-full relative z-10 hover:scale-105 transition-transform duration-500"
               />
             </div>
           </div>
@@ -88,28 +90,32 @@ const Index = () => {
               {
                 icon: 'Award',
                 title: 'Премиум импланты',
-                description: 'Работаем с системами Nobel Biocare и Straumann — мировыми лидерами'
+                description: 'Работаем с системами Nobel Biocare и Straumann — мировыми лидерами',
+                gradient: 'from-purple-500 to-blue-500'
               },
               {
                 icon: 'Shield',
                 title: 'Пожизненная гарантия',
-                description: 'Уверенность в качестве на десятилетия вперёд'
+                description: 'Уверенность в качестве на десятилетия вперёд',
+                gradient: 'from-blue-500 to-cyan-500'
               },
               {
                 icon: 'Clock',
                 title: 'Установка за 1 визит',
-                description: 'Экспресс-имплантация с немедленной нагрузкой'
+                description: 'Экспресс-имплантация с немедленной нагрузкой',
+                gradient: 'from-cyan-500 to-pink-500'
               },
               {
                 icon: 'Heart',
                 title: 'Без боли',
-                description: 'Седация и современная анестезия для вашего комфорта'
+                description: 'Седация и современная анестезия для вашего комфорта',
+                gradient: 'from-pink-500 to-purple-500'
               }
             ].map((item, index) => (
-              <Card key={index} className="border-2 hover:border-primary transition-colors hover:shadow-lg">
+              <Card key={index} className="border-2 hover:border-primary transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 group animate-fade-in" style={{animationDelay: `${index * 0.1}s`}}>
                 <CardContent className="p-6 space-y-4">
-                  <div className="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center">
-                    <Icon name={item.icon} size={28} className="text-primary" />
+                  <div className={`w-14 h-14 bg-gradient-to-br ${item.gradient} rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
+                    <Icon name={item.icon} size={28} className="text-white" />
                   </div>
                   <h3 className="text-xl font-bold">{item.title}</h3>
                   <p className="text-muted-foreground">{item.description}</p>
@@ -155,15 +161,15 @@ const Index = () => {
                   duration: '1 визит'
                 }
               ].map((item, index) => (
-                <div key={index} className="flex gap-8 items-start">
-                  <div className="hidden md:flex w-16 h-16 bg-primary rounded-full items-center justify-center text-white font-bold text-lg flex-shrink-0 relative z-10">
+                <div key={index} className="flex gap-8 items-start animate-slide-up" style={{animationDelay: `${index * 0.2}s`}}>
+                  <div className="hidden md:flex w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-full items-center justify-center text-white font-bold text-lg flex-shrink-0 relative z-10 shadow-lg hover:scale-110 transition-transform duration-300">
                     {item.step}
                   </div>
-                  <Card className="flex-1 hover:shadow-lg transition-shadow">
+                  <Card className="flex-1 hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 border-2 hover:border-primary/50">
                     <CardContent className="p-6">
                       <div className="flex justify-between items-start mb-2">
                         <h3 className="text-2xl font-bold">{item.title}</h3>
-                        <span className="text-sm text-muted-foreground bg-blue-50 px-3 py-1 rounded-full">
+                        <span className="text-sm text-muted-foreground bg-gradient-to-r from-purple-100 to-blue-100 px-3 py-1 rounded-full">
                           {item.duration}
                         </span>
                       </div>
@@ -222,11 +228,12 @@ const Index = () => {
                   </CardContent>
                 </Card>
 
-                <Card className="border-2 border-primary bg-blue-50/50">
-                  <CardContent className="p-6">
+                <Card className="border-2 border-primary bg-gradient-to-br from-purple-50 via-blue-50 to-pink-50 relative overflow-hidden">
+                  <div className="absolute -top-10 -right-10 w-32 h-32 bg-gradient-to-br from-primary to-accent rounded-full blur-3xl opacity-20 animate-pulse"></div>
+                  <CardContent className="p-6 relative z-10">
                     <div className="flex justify-between items-start mb-2">
                       <div>
-                        <div className="inline-block bg-primary text-white text-xs px-2 py-1 rounded mb-2">
+                        <div className="inline-block bg-gradient-to-r from-primary to-accent text-white text-xs px-3 py-1 rounded-full mb-2 font-bold animate-pulse shadow-lg">
                           АКЦИЯ
                         </div>
                         <h3 className="text-xl font-bold">Экспресс-имплантация</h3>
@@ -318,8 +325,9 @@ const Index = () => {
 
       <section className="py-20 px-4 bg-white">
         <div className="container mx-auto max-w-4xl">
-          <div className="bg-gradient-to-br from-primary to-blue-600 rounded-3xl p-8 md:p-12 text-white">
-            <div className="max-w-2xl mx-auto text-center space-y-6">
+          <div className="bg-gradient-to-br from-primary via-secondary to-accent rounded-3xl p-8 md:p-12 text-white relative overflow-hidden">
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(255,255,255,0.1),transparent)] animate-gradient-shift bg-[length:200%_200%]"></div>
+            <div className="max-w-2xl mx-auto text-center space-y-6 relative z-10">
               <h2 className="text-4xl font-bold">Запишитесь на бесплатную консультацию</h2>
               <p className="text-xl text-blue-100">
                 Получите персональный план лечения и узнайте точную стоимость
@@ -331,7 +339,7 @@ const Index = () => {
                   value={formData.name}
                   onChange={(e) => setFormData({...formData, name: e.target.value})}
                   required
-                  className="bg-white/10 border-white/20 text-white placeholder:text-blue-200 h-14"
+                  className="bg-white/10 border-white/20 text-white placeholder:text-purple-200 h-14 hover:bg-white/20 transition-all duration-300 focus:scale-105"
                 />
                 <Input 
                   type="tel" 
@@ -339,18 +347,18 @@ const Index = () => {
                   value={formData.phone}
                   onChange={(e) => setFormData({...formData, phone: e.target.value})}
                   required
-                  className="bg-white/10 border-white/20 text-white placeholder:text-blue-200 h-14"
+                  className="bg-white/10 border-white/20 text-white placeholder:text-purple-200 h-14 hover:bg-white/20 transition-all duration-300 focus:scale-105"
                 />
                 <Textarea 
                   placeholder="Опишите вашу ситуацию (необязательно)" 
                   value={formData.message}
                   onChange={(e) => setFormData({...formData, message: e.target.value})}
-                  className="bg-white/10 border-white/20 text-white placeholder:text-blue-200 min-h-24"
+                  className="bg-white/10 border-white/20 text-white placeholder:text-purple-200 min-h-24 hover:bg-white/20 transition-all duration-300 focus:scale-105"
                 />
                 <Button 
                   type="submit" 
                   size="lg" 
-                  className="w-full bg-white text-primary hover:bg-blue-50 text-lg py-6"
+                  className="w-full bg-white text-primary hover:bg-white/90 hover:scale-105 text-lg py-6 shadow-2xl transition-all duration-300 font-bold"
                 >
                   Записаться на консультацию
                 </Button>
