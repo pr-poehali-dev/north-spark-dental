@@ -361,7 +361,7 @@ const Index = () => {
                 role: 'ВРАЧ СТОМАТОЛОГ-ХИРУРГ',
                 experience: '8+ лет опыта',
                 specialization: 'Имплантация, удаление',
-                photo: 'https://cdn.poehali.dev/projects/f834bb08-65e9-42f1-b89a-c2d66c739710/files/4a968837-ed93-46f5-9e2e-282e99595068.jpg'
+                photo: 'https://cdn.poehali.dev/files/2030b17a-6328-432e-962c-3adecb13dfaa.png'
               }
             ].map((doctor, index) => (
               <Card key={index} className="border hover:shadow-xl transition-all duration-300">
