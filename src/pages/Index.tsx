@@ -51,6 +51,13 @@ const Index = () => {
     return () => clearInterval(interval);
   }, []);
 
+  const scrollToForm = () => {
+    const formSection = document.getElementById('consultation-form');
+    if (formSection) {
+      formSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
@@ -152,7 +159,7 @@ const Index = () => {
             </div>
             <span className="text-2xl font-bold text-foreground">Сияние</span>
           </div>
-          <Button size="lg" className="hidden md:flex">
+          <Button size="lg" className="hidden md:flex" onClick={scrollToForm}>
             Записаться на консультацию
           </Button>
         </div>
@@ -165,7 +172,7 @@ const Index = () => {
               <h1 className="text-5xl lg:text-6xl font-bold leading-tight text-foreground">Инновационный подход к лечению зубов теперь в Томске !</h1>
               <p className="text-xl text-muted-foreground">Современная имплантация зубов в Томске. Мы привезли к вам лучших специалистов и самые современные протоколы лечения из МОСКВЫ ! Пожизненная гарантия на импланты премиум-класса.</p>
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                <Button size="lg" className="text-lg px-8 py-6">
+                <Button size="lg" className="text-lg px-8 py-6" onClick={scrollToForm}>
                   Бесплатная консультация
                 </Button>
                 <Button size="lg" variant="outline" className="text-lg px-8 py-6">
@@ -240,7 +247,7 @@ const Index = () => {
               <p className="text-xl text-white/90 mb-4">
                 Скидка 15% на установку имплантов Nobel Biocare
               </p>
-              <Button size="lg" className="bg-white text-primary hover:bg-white/90 text-lg px-12 py-6 font-bold">
+              <Button size="lg" className="bg-white text-primary hover:bg-white/90 text-lg px-12 py-6 font-bold" onClick={scrollToForm}>
                 Успеть записаться
               </Button>
             </div>
@@ -486,7 +493,7 @@ const Index = () => {
                 </Card>
               </div>
 
-              <Button size="lg" className="w-full text-lg py-6">
+              <Button size="lg" className="w-full text-lg py-6" onClick={scrollToForm}>
                 Записаться на консультацию
               </Button>
             </div>
@@ -590,7 +597,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-20 px-4 bg-primary">
+      <section id="consultation-form" className="py-20 px-4 bg-primary">
         <div className="container mx-auto max-w-4xl">
           <div className="max-w-2xl mx-auto text-center space-y-6">
             <h2 className="text-4xl font-bold text-white">Запишитесь на бесплатную консультацию</h2>
