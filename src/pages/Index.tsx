@@ -285,11 +285,57 @@ const Index = () => {
           <h2 className="text-4xl font-bold text-center mb-4 text-foreground">Врачи клиники</h2>
           <p className="text-center text-muted-foreground mb-12 text-lg">Команда профессионалов с многолетним опытом</p>
           
-          <img 
-            src="https://cdn.poehali.dev/files/ad0daa14-098c-4413-af7b-eb9729e597b9.png" 
-            alt="Врачи клиники Сияние Севера"
-            className="w-full rounded-2xl shadow-xl"
-          />
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              {
+                name: 'Саламов Абубакар Якубович',
+                role: 'ГЛАВНЫЙ ВРАЧ',
+                experience: '15+ лет опыта',
+                specialization: 'Имплантология, хирургия'
+              },
+              {
+                name: 'Реутов Евгений Александрович',
+                role: 'ВРАЧ СТОМАТОЛОГ-ОРТОПЕД',
+                experience: '12+ лет опыта',
+                specialization: 'Протезирование, виниры'
+              },
+              {
+                name: 'Магомедов Зураб Залимханович',
+                role: 'ВРАЧ СТОМАТОЛОГ-ОРТОПЕД',
+                experience: '10+ лет опыта',
+                specialization: 'Коронки, мосты'
+              },
+              {
+                name: 'Магомедалиев Гасан Алипович',
+                role: 'ВРАЧ СТОМАТОЛОГ-ХИРУРГ',
+                experience: '8+ лет опыта',
+                specialization: 'Имплантация, удаление'
+              }
+            ].map((doctor, index) => (
+              <Card key={index} className="border hover:shadow-xl transition-all duration-300">
+                <CardContent className="p-6 space-y-4">
+                  <div className="aspect-square bg-gradient-to-br from-gray-100 to-gray-200 rounded-xl overflow-hidden">
+                    <div className="w-full h-full flex items-center justify-center">
+                      <Icon name="User" size={80} className="text-gray-400" />
+                    </div>
+                  </div>
+                  <div className="space-y-2">
+                    <div className="text-xs font-bold text-primary uppercase tracking-wide">
+                      {doctor.role}
+                    </div>
+                    <h3 className="text-lg font-bold text-foreground leading-tight">
+                      {doctor.name}
+                    </h3>
+                    <p className="text-sm text-muted-foreground">{doctor.experience}</p>
+                    <p className="text-sm text-muted-foreground italic">{doctor.specialization}</p>
+                  </div>
+                  <Button variant="outline" className="w-full">
+                    Записаться на приём
+                  </Button>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
         </div>
       </section>
 
