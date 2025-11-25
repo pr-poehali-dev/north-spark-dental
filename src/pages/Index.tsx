@@ -340,7 +340,7 @@ const Index = () => {
                 role: 'ГЛАВНЫЙ ВРАЧ',
                 experience: '15+ лет опыта',
                 specialization: 'Имплантология, хирургия',
-                photo: 'https://cdn.poehali.dev/projects/f834bb08-65e9-42f1-b89a-c2d66c739710/files/193beaf5-cab8-4add-b7b1-19abe305f316.jpg'
+                photo: 'https://cdn.poehali.dev/files/833e8409-983f-4e61-b5df-9f1977c24652.png'
               },
               {
                 name: 'Реутов Евгений Александрович',
