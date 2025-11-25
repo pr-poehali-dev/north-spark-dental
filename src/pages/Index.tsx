@@ -273,7 +273,7 @@ const Index = () => {
                     <div className="flex justify-between items-start mb-2">
                       <div>
                         <h3 className="text-xl font-bold text-foreground">Имплант под ключ</h3>
-                        <p className="text-muted-foreground">Straumann (Швейцария)</p>
+                        <p className="text-muted-foreground">Dentium (Корея)</p>
                       </div>
                       <div className="text-right">
                         <div className="text-3xl font-bold text-primary">от 3500 в месяц</div>
