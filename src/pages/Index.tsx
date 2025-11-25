@@ -175,8 +175,8 @@ const Index = () => {
                 <Button size="lg" className="text-lg px-8 py-6" onClick={scrollToForm}>
                   Бесплатная консультация
                 </Button>
-                <Button size="lg" variant="outline" className="text-lg px-8 py-6">
-                  +7 (3822) 270-777
+                <Button size="lg" variant="outline" className="text-lg px-8 py-6" asChild>
+                  <a href="tel:+73822270777">+7 (3822) 270-777</a>
                 </Button>
               </div>
               <div className="grid grid-cols-3 gap-6 pt-6">
