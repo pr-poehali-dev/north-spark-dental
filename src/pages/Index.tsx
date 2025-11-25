@@ -30,8 +30,7 @@ const Index = () => {
   }, []);
 
   useEffect(() => {
-    const targetDate = new Date();
-    targetDate.setDate(targetDate.getDate() + 7);
+    const targetDate = new Date('2025-12-31T23:59:59');
     
     const updateCountdown = () => {
       const now = new Date().getTime();
@@ -44,6 +43,8 @@ const Index = () => {
           minutes: Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
           seconds: Math.floor((distance % (1000 * 60)) / 1000)
         });
+      } else {
+        setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
       }
     };
     
