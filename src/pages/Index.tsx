@@ -390,7 +390,7 @@ const Index = () => {
               <div className="space-y-2 text-muted-foreground">
                 <div className="flex items-center gap-2">
                   <Icon name="MapPin" size={18} />
-                  <span>г. Томск, пр. Ленина, 123</span>
+                  <span>г. Томск, Белинского 63</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Icon name="Phone" size={18} />
