@@ -185,9 +185,7 @@ const Index = () => {
       <section className="py-12 px-4 bg-gradient-to-r from-primary via-gray-800 to-primary">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center space-y-6">
-            <div className="inline-block bg-white text-primary px-6 py-2 rounded-full font-bold text-sm">
-              ⚡ ОГРАНИЧЕННОЕ ПРЕДЛОЖЕНИЕ
-            </div>
+            <div className="inline-block bg-white text-primary px-6 py-2 rounded-full font-bold text-sm"> ОГРАНИЧЕННОЕ ПРЕДЛОЖЕНИЕ</div>
             <h2 className="text-4xl lg:text-5xl font-bold text-white">
               Акция на имплантацию заканчивается через:
             </h2>
