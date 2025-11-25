@@ -308,7 +308,7 @@ const Index = () => {
                       </div>
                       <div className="text-right">
                         <div className="text-sm text-muted-foreground line-through">90 000 ₽</div>
-                        <div className="text-3xl font-bold text-primary">75 000 ₽</div>
+                        <div className="text-3xl font-bold text-primary">от 4444 в месяц</div>
                       </div>
                     </div>
                     <ul className="space-y-2 mt-4">
