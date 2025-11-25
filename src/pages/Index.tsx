@@ -347,7 +347,7 @@ const Index = () => {
                 role: 'ВРАЧ СТОМАТОЛОГ-ОРТОПЕД',
                 experience: '12+ лет опыта',
                 specialization: 'Протезирование, виниры',
-                photo: 'https://cdn.poehali.dev/projects/f834bb08-65e9-42f1-b89a-c2d66c739710/files/3ad32231-1878-4f84-823a-d9d62a2ce4c7.jpg'
+                photo: 'https://cdn.poehali.dev/files/833e8409-983f-4e61-b5df-9f1977c24652.png'
               },
               {
                 name: 'Магомедов Зураб Залимханович',
