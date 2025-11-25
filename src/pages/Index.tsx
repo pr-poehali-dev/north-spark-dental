@@ -256,9 +256,9 @@ const Index = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <img 
-                src="https://cdn.poehali.dev/projects/f834bb08-65e9-42f1-b89a-c2d66c739710/files/ba384838-8d5d-4a1e-8277-60454a4a958d.jpg" 
-                alt="Зубной имплант"
-                className="rounded-2xl shadow-xl w-full"
+                src="https://cdn.poehali.dev/projects/f834bb08-65e9-42f1-b89a-c2d66c739710/files/786d3bea-82ea-420c-bc57-ecf8d26e6769.jpg" 
+                alt="Кабинет стоматологии с современным оборудованием"
+                className="rounded-2xl shadow-xl w-full object-cover"
               />
             </div>
             <div className="space-y-6">
@@ -433,9 +433,9 @@ const Index = () => {
 
           <div className="mt-12 text-center">
             <img 
-              src="https://cdn.poehali.dev/projects/f834bb08-65e9-42f1-b89a-c2d66c739710/files/13e8bc86-7685-4d89-b9ca-cf2e15a40c0e.jpg" 
-              alt="Счастливый пациент с красивой улыбкой"
-              className="mx-auto rounded-2xl shadow-xl max-w-md w-full"
+              src="https://cdn.poehali.dev/projects/f834bb08-65e9-42f1-b89a-c2d66c739710/files/5f4a8ffe-6f44-4dff-87b3-196ca9aa2761.jpg" 
+              alt="Зона ожидания в клинике Сияние Севера"
+              className="mx-auto rounded-2xl shadow-xl max-w-md w-full object-cover"
             />
           </div>
         </div>
