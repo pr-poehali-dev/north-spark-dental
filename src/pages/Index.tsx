@@ -276,7 +276,7 @@ const Index = () => {
                         <p className="text-muted-foreground">Straumann (Швейцария)</p>
                       </div>
                       <div className="text-right">
-                        <div className="text-3xl font-bold text-primary">65 000 ₽</div>
+                        <div className="text-3xl font-bold text-primary">от 3500 в месяц</div>
                       </div>
                     </div>
                     <ul className="space-y-2 mt-4">
