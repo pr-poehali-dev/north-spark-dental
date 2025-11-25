@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
@@ -11,6 +11,15 @@ const Index = () => {
     phone: '',
     message: ''
   });
+  const [showPopup, setShowPopup] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowPopup(true);
+    }, 30000);
+
+    return () => clearTimeout(timer);
+  }, []);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -21,6 +30,58 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      {showPopup && (
+        <div className="fixed inset-0 bg-background/80 backdrop-blur-sm z-50 flex items-center justify-center p-4 animate-fade-in">
+          <Card className="max-w-lg w-full border-2 border-primary bg-card shadow-[0_0_60px_rgba(234,179,8,0.4)] animate-scale-in">
+            <CardContent className="p-8 space-y-6 relative">
+              <button
+                onClick={() => setShowPopup(false)}
+                className="absolute top-4 right-4 text-muted-foreground hover:text-foreground transition-colors"
+                aria-label="Закрыть"
+              >
+                <Icon name="X" size={24} />
+              </button>
+              
+              <div className="text-center space-y-4">
+                <div className="w-20 h-20 bg-gradient-to-br from-primary via-yellow-500 to-amber-600 rounded-full flex items-center justify-center mx-auto shadow-[0_0_30px_rgba(234,179,8,0.5)]">
+                  <Icon name="Sparkles" size={40} className="text-background" />
+                </div>
+                
+                <h3 className="text-3xl font-bold bg-gradient-to-r from-primary via-yellow-500 to-amber-600 bg-clip-text text-transparent">
+                  Специальное предложение!
+                </h3>
+                
+                <p className="text-lg text-muted-foreground">
+                  Запишитесь на бесплатную консультацию сегодня и получите <span className="font-bold text-primary">скидку 15%</span> на имплантацию
+                </p>
+              </div>
+
+              <div className="space-y-4">
+                <Input
+                  placeholder="Ваше имя"
+                  className="h-12 border-primary/30 focus:border-primary"
+                />
+                <Input
+                  type="tel"
+                  placeholder="Телефон"
+                  className="h-12 border-primary/30 focus:border-primary"
+                />
+                <Button
+                  size="lg"
+                  className="w-full text-lg py-6 bg-gradient-to-r from-primary via-yellow-500 to-amber-600 hover:shadow-[0_0_40px_rgba(234,179,8,0.5)] hover:scale-105 transition-all duration-300 font-bold"
+                >
+                  Получить скидку 15%
+                </Button>
+              </div>
+
+              <p className="text-xs text-center text-muted-foreground">
+                Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности
+              </p>
+            </CardContent>
+          </Card>
+        </div>
+      )}
+
       <a 
         href="https://wa.me/73822270777" 
         target="_blank" 
