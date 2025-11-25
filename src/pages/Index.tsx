@@ -285,7 +285,8 @@ const Index = () => {
                         <p className="text-muted-foreground">Dentium / Osstem (Южная Корея)</p>
                       </div>
                       <div className="text-right">
-                        <div className="text-3xl font-bold text-primary">65 000 ₽</div>
+                        <div className="text-3xl font-bold text-primary">От 60 000 ₽
+или 3500 ₽ в месяц</div>
                       </div>
                     </div>
                     <ul className="space-y-2 mt-4">
