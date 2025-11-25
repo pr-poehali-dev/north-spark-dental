@@ -196,8 +196,8 @@ const Index = () => {
         </div>
       </header>
 
-      <section className="pt-32 pb-20 px-4 bg-gradient-to-br from-white via-blue-50 to-white">
-        <div className="container mx-auto max-w-7xl">
+      <section className="pt-32 pb-20 bg-gradient-to-br from-white via-blue-50 to-white">
+        <div className="container mx-auto max-w-7xl px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold leading-tight text-foreground">Инновационный подход к лечению зубов теперь в Томске !</h1>
@@ -236,8 +236,8 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-12 px-4 bg-gradient-to-r from-primary via-gray-800 to-primary">
-        <div className="container mx-auto max-w-6xl">
+      <section className="py-12 bg-gradient-to-r from-primary via-gray-800 to-primary">
+        <div className="container mx-auto max-w-6xl px-4">
           <div className="text-center space-y-6">
             <div className="inline-block bg-white text-primary px-6 py-2 rounded-full font-bold text-sm"> ОГРАНИЧЕННОЕ ПРЕДЛОЖЕНИЕ</div>
             <h2 className="text-2xl md:text-3xl lg:text-5xl font-bold text-white">
@@ -286,8 +286,8 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="why-us" data-animate className={`py-20 px-4 bg-white transition-all duration-1000 ${visibleSections.has('why-us') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-        <div className="container mx-auto max-w-7xl">
+      <section id="why-us" data-animate className={`py-20 bg-white transition-all duration-1000 ${visibleSections.has('why-us') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+        <div className="container mx-auto max-w-7xl px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-foreground">Почему выбирают нас</h2>
           <p className="text-center text-muted-foreground mb-12 text-base md:text-lg">Современные технологии и опытные специалисты</p>
           
@@ -328,8 +328,8 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="doctors" data-animate className={`py-20 px-4 bg-gradient-to-b from-blue-50 to-white transition-all duration-1000 ${visibleSections.has('doctors') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-        <div className="container mx-auto max-w-7xl">
+      <section id="doctors" data-animate className={`py-20 bg-gradient-to-b from-blue-50 to-white transition-all duration-1000 ${visibleSections.has('doctors') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+        <div className="container mx-auto max-w-7xl px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-foreground">Врачи клиники</h2>
           <p className="text-center text-muted-foreground mb-12 text-base md:text-lg">Команда профессионалов с многолетним опытом</p>
           
@@ -393,8 +393,8 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="process" data-animate className={`py-20 px-4 bg-white transition-all duration-1000 ${visibleSections.has('process') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-        <div className="container mx-auto max-w-5xl">
+      <section id="process" data-animate className={`py-20 bg-white transition-all duration-1000 ${visibleSections.has('process') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+        <div className="container mx-auto max-w-5xl px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-foreground">Как проходит имплантация</h2>
           <p className="text-center text-muted-foreground mb-12 md:mb-16 text-base md:text-lg">Прозрачный процесс от консультации до результата</p>
           
@@ -446,8 +446,8 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="pricing" data-animate className={`py-20 px-4 bg-white transition-all duration-1000 ${visibleSections.has('pricing') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-        <div className="container mx-auto max-w-7xl">
+      <section id="pricing" data-animate className={`py-20 bg-white transition-all duration-1000 ${visibleSections.has('pricing') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+        <div className="container mx-auto max-w-7xl px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <img 
@@ -532,8 +532,8 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="results" data-animate className={`py-20 px-4 bg-white transition-all duration-1000 ${visibleSections.has('results') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-        <div className="container mx-auto max-w-7xl">
+      <section id="results" data-animate className={`py-20 bg-white transition-all duration-1000 ${visibleSections.has('results') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+        <div className="container mx-auto max-w-7xl px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-foreground">Результаты наших работ</h2>
           <p className="text-center text-muted-foreground mb-12 text-base md:text-lg">Реальные примеры успешной имплантации</p>
           
@@ -583,8 +583,8 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="reviews" data-animate className={`py-20 px-4 bg-gradient-to-b from-blue-50 to-white transition-all duration-1000 ${visibleSections.has('reviews') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-        <div className="container mx-auto max-w-6xl">
+      <section id="reviews" data-animate className={`py-20 bg-gradient-to-b from-blue-50 to-white transition-all duration-1000 ${visibleSections.has('reviews') ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+        <div className="container mx-auto max-w-6xl px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-foreground">Отзывы наших пациентов</h2>
           <p className="text-center text-muted-foreground mb-12 text-base md:text-lg">Реальные истории изменений</p>
           
@@ -628,8 +628,8 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="consultation-form" className="py-20 px-4 bg-primary">
-        <div className="container mx-auto max-w-4xl">
+      <section id="consultation-form" className="py-20 bg-primary">
+        <div className="container mx-auto max-w-4xl px-4">
           <div className="max-w-2xl mx-auto text-center space-y-6">
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white">Запишитесь на бесплатную консультацию</h2>
             <p className="text-base md:text-lg lg:text-xl text-white/90">
@@ -674,8 +674,8 @@ const Index = () => {
         </div>
       </section>
 
-      <footer className="py-12 px-4 bg-white border-t">
-        <div className="container mx-auto max-w-7xl">
+      <footer className="py-12 bg-white border-t">
+        <div className="container mx-auto max-w-7xl px-4">
           <div className="grid md:grid-cols-3 gap-8">
             <div>
               <div className="flex items-center gap-2 mb-4">
