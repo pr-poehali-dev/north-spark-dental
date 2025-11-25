@@ -564,7 +564,7 @@ const Index = () => {
             
             <div className="relative group overflow-hidden rounded-2xl shadow-lg">
               <img 
-                src="https://cdn.poehali.dev/projects/f834bb08-65e9-42f1-b89a-c2d66c739710/files/e0b7d3ff-c739-4b8c-b979-b3f4863ec025.jpg" 
+                src="https://cdn.poehali.dev/projects/f834bb08-65e9-42f1-b89a-c2d66c739710/files/f185bbe8-eef6-400d-b2ea-0cca8d294772.jpg" 
                 alt="Трансформация улыбки"
                 className="w-full h-80 object-cover transform group-hover:scale-110 transition-transform duration-500"
               />
