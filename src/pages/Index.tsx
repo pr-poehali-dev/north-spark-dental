@@ -147,9 +147,7 @@ const Index = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <h1 className="text-5xl lg:text-6xl font-bold leading-tight text-foreground">Инновационный подход к лечению зубов теперь в Томске !</h1>
-              <p className="text-xl text-muted-foreground">
-                Современная имплантация зубов в Томске. Пожизненная гарантия на импланты премиум-класса.
-              </p>
+              <p className="text-xl text-muted-foreground">Современная имплантация зубов в Томске. Мы привезли к вам лучших специалистов и самые современные протоколы лечения из МОСКВЫ ! Пожизненная гарантия на импланты премиум-класса.</p>
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
                 <Button size="lg" className="text-lg px-8 py-6">
                   Бесплатная консультация
