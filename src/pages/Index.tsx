@@ -30,7 +30,7 @@ const Index = () => {
   }, []);
 
   useEffect(() => {
-    const targetDate = new Date('2025-12-31T23:59:59');
+    const targetDate = new Date('2025-12-01T00:00:00');
     
     const updateCountdown = () => {
       const now = new Date().getTime();
